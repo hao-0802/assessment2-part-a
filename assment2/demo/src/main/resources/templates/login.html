@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .login-box {
+            width: 360px;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .login-box h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+        .item {
+            margin-bottom: 20px;
+        }
+        .item label {
+            display: block;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        .item input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        .item input:focus {
+            outline: none;
+            border-color: #4096ff;
+        }
+        button {
+            width: 100%;
+            padding: 11px;
+            background-color: #4096ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2b7edb;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h3>用户登录</h3>
+        <form action="/login" method="post">
+            <div class="item">
+                <label>账号</label>
+                <input type="text" name="username" placeholder="请输入账号">
+            </div>
+            <div class="item">
+                <label>密码</label>
+                <input type="password" name="password" placeholder="请输入密码">
+            </div>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+</body>
+</html>
